@@ -1,0 +1,15 @@
+services:
+  whiteboard:
+    build: .
+    ports:
+      - "127.0.0.1:4180:4180"
+    environment:
+      WHITEBOARD_PUBLIC_URL: ${WHITEBOARD_PUBLIC_URL:?Set the HTTPS origin}
+      WHITEBOARD_TOKEN: ${WHITEBOARD_TOKEN:?Set a strong access token}
+    volumes:
+      - whiteboard-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  whiteboard-data:

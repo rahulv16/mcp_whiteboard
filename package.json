@@ -1,0 +1,1 @@
+{"name":"whiteboard-local","version":"0.1.0","private":true,"type":"module","scripts":{"start":"node server.mjs","mcp":"node mcp.mjs","test":"node --test tests/*.test.mjs","demo":"node demo.mjs"},"engines":{"node":">=20"},"dependencies":{"@modelcontextprotocol/sdk":"^1.32.2","katex":"^0.19.1","zod":"^4.6.7"}}
